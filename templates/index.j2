@@ -1,0 +1,77 @@
+<!-- Purpose: Jinja2 template for generating index.html from projects-config.yaml -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ site_name }}</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="{{ site_tagline }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <h1 id="site-name" class="site-title">{{ site_name }}</h1>
+        <p id="site-tagline" class="site-tagline">{{ site_tagline }}</p>
+      </div>
+      <div class="theme-toggle" aria-hidden="false">
+        <button id="theme-sun" class="theme-btn" aria-label="Light theme" title="Light theme">
+          <!-- sun icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="theme-moon" class="theme-btn" aria-label="Dark theme" title="Dark theme">
+          <!-- moon icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="bio">
+      <h2>About</h2>
+      <p id="bio">{{ site_bio }}</p>
+    </section>
+
+    <section class="projects">
+      <h2>Selected Projects</h2>
+      {% for cls, items in projects_by_class.items() %}
+      <article class="project-group" data-classification="{{ cls }}">
+        <h3 style="text-transform:capitalize">{{ cls }}</h3>
+        <ul class="project-list" data-page-size="6" data-class="{{ cls }}">
+          {% for p in items %}
+          <li>
+            <a class="proj" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                {% if p.logo %}
+                <img class="proj-logo" src="{{ p.logo }}" alt="{{ p.name }} logo">
+                {% else %}
+                <span class="proj-logo-emoji" aria-hidden="true">{{ p.image }}</span>
+                {% endif %}
+                <div class="proj-meta">
+                  <div class="proj-title">{{ p.name }}</div>
+                  <div class="proj-desc">{{ p.description }}</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="pager" data-class="{{ cls }}"></div>
+      </article>
+      {% endfor %}
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with ❤️ — <a href="https://github.com/">GitHub</a></p>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Purpose: GitHub Actions workflow to upload and deploy this static site to GitHub Pages
+name: Deploy Pages
+
+# Minimal permissions required for the Pages deployment
+permissions:
+  contents: write
+  pages: write
+  actions: read
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload repository root as the site artifact (static files only)
+          path: .
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1

@@ -1,0 +1,157 @@
+# Projects Configuration
+# This file is dynamically updated with all public repositories from GitHub
+# You can manually edit the 'classification' field for each project
+# Classification options: training, project
+# The 'image' field is automatically generated based on the project name (animal emoji)
+#
+# To update this file, run: python generate_index.py
+#
+# Last updated: 2025-12-16T12:04:07.046770
+
+projects:
+- name: github-for-developers-7
+  description: Training received on Github from O'Reilly
+  url: https://github.com/jaygit/github-for-developers-7
+  classification: training
+  image: 🦉
+  language: Unknown
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:36:01+00:00'
+  logo: assets/images/github-for-developers-7.svg
+- name: pirover
+  description: A rover built with raspberry pi and vision.
+  url: https://github.com/jaygit/pirover
+  classification: electronics
+  image: 🦈
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:34:53+00:00'
+  logo: assets/images/pirover.svg
+- name: githubActions-ex3
+  description: Advanced GitHub Actions examples demonstrating environment variables,
+    job dependencies, custom actions, and secrets management.
+  url: https://github.com/jaygit/githubActions-ex3
+  classification: training
+  image: 🐭
+  language: Unknown
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:29:17+00:00'
+  logo: assets/images/githubactions-ex3.svg
+- name: scroll-phat
+  description: clone of pimoroni scroll phat code
+  url: https://github.com/jaygit/scroll-phat
+  classification: electronics
+  image: 🦗
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:27:40+00:00'
+  logo: assets/images/scroll-phat.svg
+- name: wired
+  description: Python project to generate a spreadsheet of wired articlenames by date
+  url: https://github.com/jaygit/wired
+  classification: project
+  image: 🦆
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:26:41+00:00'
+  logo: assets/images/wired.svg
+- name: daily-note
+  description: A collection of shell scripts for managing and navigating Obsidian-style
+    vaults with features for note creation, search, and git integration.
+  url: https://github.com/jaygit/daily-note
+  classification: project
+  image: 🐹
+  language: Shell
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T11:21:50+00:00'
+  logo: assets/images/daily-note.svg
+- name: skills-github-pages
+  description: My clone repository
+  url: https://github.com/jaygit/skills-github-pages
+  classification: project
+  image: 🐺
+  language: JavaScript
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-11T07:48:22+00:00'
+  logo: assets/images/skills-github-pages.svg
+- name: diary-rag
+  description: A RAG implementation on querying Obsidian Notes
+  url: https://github.com/jaygit/diary-rag
+  classification: project
+  image: 🐗
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-05T08:33:10+00:00'
+  logo: assets/images/diary-rag.svg
+- name: aimailreader
+  description: A mail reader using IMAPClient and Gemini API
+  url: https://github.com/jaygit/aimailreader
+  classification: project
+  image: 🐇
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-11-19T08:32:17+00:00'
+  logo: assets/images/aimailreader.svg
+- name: rssreader
+  description: TUI based rssreader
+  url: https://github.com/jaygit/rssreader
+  classification: project
+  image: 🐉
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-11-05T14:07:53+00:00'
+  logo: assets/images/rssreader.svg
+- name: python-template
+  description: Python Template for GitHub Codespaces
+  url: https://github.com/jaygit/python-template
+  classification: project
+  image: 🦈
+  language: Unknown
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-01-02T21:43:30+00:00'
+  logo: assets/images/python-template.svg
+- name: r2d2_clock
+  description: This is a raspberry pi talking clock that I built for my son, fitted
+    on an R2D2 cardboard picture (Hence the name)
+  url: https://github.com/jaygit/r2d2_clock
+  classification: electronics
+  image: 🦗
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2017-05-03T08:09:37+00:00'
+  logo: assets/images/r2d2-clock.svg
+- name: bash-scripts
+  description: All my bash scripts
+  url: https://github.com/jaygit/bash-scripts
+  classification: project
+  image: 🦈
+  language: Unknown
+  stars: 1
+  forks: 0
+  topics: []
+  updated_at: '2013-01-08T08:50:00+00:00'
+  logo: assets/images/bash-scripts.svg

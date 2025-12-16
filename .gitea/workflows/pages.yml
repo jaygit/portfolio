@@ -1,0 +1,66 @@
+# Purpose: Gitea Actions workflow to publish the static site by updating `gh-pages` branch.
+# Note: This workflow creates/overwrites the `gh-pages` branch on push to `main`.
+# Requirements: repository secret `GITEA_TOKEN` (personal access token with repo write).
+
+name: Deploy Pages (Gitea)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Prepare site copy
+        run: |
+          # Create a clean directory containing only the site files
+          rm -rf site-out || true
+          mkdir site-out
+          # Copy all files except the git metadata into the output folder
+          rsync -av --exclude='.git' --exclude='site-out' . site-out/
+
+      - name: Commit and push to gh-pages
+        env:
+          GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
+        run: |
+          set -e
+          cd site-out
+          git init
+          git config user.name "gitea-actions[bot]"
+          git config user.email "actions@gitea.local"
+          git add --all
+          # Allow commit step to succeed even if there are no changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Deploy site from main @ ${GITEA_RUN_ID:-manual}"
+          fi
+
+          # Compute authenticated origin URL (works for HTTPS remotes)
+          ORIGIN_URL=$(git -C .. remote get-url origin || true)
+          if [ -z "$ORIGIN_URL" ]; then
+            echo "ERROR: origin remote not found in parent repository. Ensure the repository remote is configured and the runner can access it." >&2
+            exit 1
+          fi
+
+          if echo "$ORIGIN_URL" | grep -q "^git@"; then
+            echo "ERROR: SSH origin URLs are not supported by this workflow. Use an HTTPS remote and provide a GITEA_TOKEN secret." >&2
+            exit 1
+          fi
+
+          AUTH_URL=${ORIGIN_URL/https:\/\//https:\/\/${GITEA_TOKEN}@}
+
+          # Push the current tree to gh-pages branch
+          git remote add deploy "$AUTH_URL"
+          git push --force deploy HEAD:gh-pages

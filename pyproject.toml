@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "github-web"
+version = "0.1.0"
+description = "Minimal static portfolio site with fetch/update tooling"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.12"
+PyGithub = "<1.76"
+PyYAML = "^6.0"
+python-dotenv = "^1.0"
+Jinja2 = "^3.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

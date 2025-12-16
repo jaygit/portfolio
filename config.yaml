@@ -1,0 +1,8 @@
+## Logger configuration
+# level: DEBUG|INFO|WARNING|ERROR
+# console: true/false
+# file: path to logfile or null
+
+level: INFO
+console: true
+file: logs/app.log

@@ -1,0 +1,307 @@
+<!-- Purpose: Jinja2 template for generating index.html from projects-config.yaml -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jayanth</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Developer • Designer • Builder">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <h1 id="site-name" class="site-title">Jayanth</h1>
+        <p id="site-tagline" class="site-tagline">Developer • Designer • Builder</p>
+      </div>
+      <div class="theme-toggle" aria-hidden="false">
+        <button id="theme-sun" class="theme-btn" aria-label="Light theme" title="Light theme">
+          <!-- sun icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="theme-moon" class="theme-btn" aria-label="Dark theme" title="Dark theme">
+          <!-- moon icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="bio">
+      <h2>About</h2>
+      <p id="bio">A systems and automation engineer who builds practical tools and prototypes. I work with Linux/Unix, Python and embedded electronics.</p>
+    </section>
+
+    <section class="projects">
+      <h2>Selected Projects</h2>
+      
+      <article class="project-group" data-classification="training">
+        <h3 style="text-transform:capitalize">training</h3>
+        <ul class="project-list" data-page-size="6" data-class="training">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/github-for-developers-7" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/github-for-developers-7.svg" alt="github-for-developers-7 logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">github-for-developers-7</div>
+                  <div class="proj-desc">Training received on Github from O'Reilly</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/githubActions-ex3" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/githubactions-ex3.svg" alt="githubActions-ex3 logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">githubActions-ex3</div>
+                  <div class="proj-desc">Advanced GitHub Actions examples demonstrating environment variables, job dependencies, custom actions, and secrets management.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+        <div class="pager" data-class="training"></div>
+      </article>
+      
+      <article class="project-group" data-classification="electronics">
+        <h3 style="text-transform:capitalize">electronics</h3>
+        <ul class="project-list" data-page-size="6" data-class="electronics">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/pirover" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/pirover.svg" alt="pirover logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">pirover</div>
+                  <div class="proj-desc">A rover built with raspberry pi and vision.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/scroll-phat" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/scroll-phat.svg" alt="scroll-phat logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">scroll-phat</div>
+                  <div class="proj-desc">clone of pimoroni scroll phat code</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/r2d2_clock" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/r2d2-clock.svg" alt="r2d2_clock logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">r2d2_clock</div>
+                  <div class="proj-desc">This is a raspberry pi talking clock that I built for my son, fitted on an R2D2 cardboard picture (Hence the name)</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+        <div class="pager" data-class="electronics"></div>
+      </article>
+      
+      <article class="project-group" data-classification="project">
+        <h3 style="text-transform:capitalize">project</h3>
+        <ul class="project-list" data-page-size="6" data-class="project">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/wired" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/wired.svg" alt="wired logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">wired</div>
+                  <div class="proj-desc">Python project to generate a spreadsheet of wired articlenames by date</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/daily-note" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/daily-note.svg" alt="daily-note logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">daily-note</div>
+                  <div class="proj-desc">A collection of shell scripts for managing and navigating Obsidian-style vaults with features for note creation, search, and git integration.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/skills-github-pages" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/skills-github-pages.svg" alt="skills-github-pages logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">skills-github-pages</div>
+                  <div class="proj-desc">My clone repository</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/diary-rag" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/diary-rag.svg" alt="diary-rag logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">diary-rag</div>
+                  <div class="proj-desc">A RAG implementation on querying Obsidian Notes</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/aimailreader" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/aimailreader.svg" alt="aimailreader logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">aimailreader</div>
+                  <div class="proj-desc">A mail reader using IMAPClient and Gemini API</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/rssreader" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/rssreader.svg" alt="rssreader logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">rssreader</div>
+                  <div class="proj-desc">TUI based rssreader</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/python-template" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/python-template.svg" alt="python-template logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">python-template</div>
+                  <div class="proj-desc">Python Template for GitHub Codespaces</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/bash-scripts" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/bash-scripts.svg" alt="bash-scripts logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">bash-scripts</div>
+                  <div class="proj-desc">All my bash scripts</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+        <div class="pager" data-class="project"></div>
+      </article>
+      
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with ❤️ — <a href="https://github.com/">GitHub</a></p>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

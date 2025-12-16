@@ -1,0 +1,111 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env.*
+*.env
+!.env.example
+.Python/
+dist/
+develop-eggs/
+build/
+mypy_cache/
+.coverage
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.venv
+
+# Poetry / uv lock files
+poetry.lock
+uv.lock
+
+# Backups
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bak
+*.swp
+
+# Temp files and directories
+tmp/
+tags
+
+# Databases
+data/
+*.db
+*.sqlite3
+rag_db/
+
+# Ollama related
+ollama_models/
+
+# -------------------------
+# Node.js / JavaScript
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+
+# -------------------------
+# Docker / Containers
+# -------------------------
+*.tar
+.dockerignore
+
+# -------------------------
+# Kubernetes / Helm
+# -------------------------
+charts/
+*.tgz
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea
+*.sublime-workspace
+*.sublime-project
+
+# -------------------------
+# Logs / Runtime
+# -------------------------
+log/
+*.log
+*.pid
+*.out
+
+# -------------------------
+# Test artifacts
+# -------------------------
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+junit.xml
+
+# -------------------------
+# Jupyter / Notebooks
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Secrets / Keys
+# -------------------------
+*.pem
+*.key
+
+# -------------------------
+# System files
+# -------------------------
+.DS_Store
+Thumbs.db
+*~
