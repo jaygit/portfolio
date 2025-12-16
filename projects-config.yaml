@@ -6,9 +6,20 @@
 #
 # To update this file, run: python generate_index.py
 #
-# Last updated: 2025-12-16T12:04:07.046770
+# Last updated: 2025-12-16T14:46:36.874233
 
 projects:
+- name: portfolio
+  description: This site is for building a static web-page for public repos.
+  url: https://github.com/jaygit/portfolio
+  classification: project
+  image: 🦋
+  language: Python
+  stars: 0
+  forks: 0
+  topics: []
+  updated_at: '2025-12-16T13:31:26+00:00'
+  logo: assets/images/portfolio.svg
 - name: github-for-developers-7
   description: Training received on Github from O'Reilly
   url: https://github.com/jaygit/github-for-developers-7

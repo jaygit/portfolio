@@ -9,7 +9,7 @@
   <meta name="description" content="{{ site_tagline }}">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" style="--header-banner: url('{{ header_image | default('/assets/images/bio-bg.png') }}')">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
       <div>
         <h1 id="site-name" class="site-title">{{ site_name }}</h1>
@@ -30,8 +30,12 @@
 
   <main class="container">
     <section class="bio">
-      <h2>About</h2>
-      <p id="bio">{{ site_bio }}</p>
+      <div class="bio-inner">
+        <div class="bio-text">
+          <h2>About</h2>
+          <p id="bio">{{ site_bio }}</p>
+        </div>
+      </div>
     </section>
 
     <section class="projects">

@@ -1,5 +1,5 @@
 <!-- Purpose: Project description and quick local preview instructions -->
-# github-web
+# Portfolio
 
 Minimal static personal site for showcasing public GitHub repositories and projects.
 
@@ -9,14 +9,7 @@ Quick local preview
 ```bash
 python3 -m http.server 8000
 ```
-
 Install dependencies
-- If you use `uv` to manage your environment, run:
-
-```bash
-uv sync
-```
-
 - As an alternative, install with `pip` (if not using `uv`):
 
 ```bash

@@ -9,7 +9,7 @@
   <meta name="description" content="Developer • Designer • Builder">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" style="--header-banner: url('/assets/images/bio-bg.png')">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
       <div>
         <h1 id="site-name" class="site-title">Jayanth</h1>
@@ -30,122 +30,38 @@
 
   <main class="container">
     <section class="bio">
-      <h2>About</h2>
-      <p id="bio">A systems and automation engineer who builds practical tools and prototypes. I work with Linux/Unix, Python and embedded electronics.</p>
+      <div class="bio-inner">
+        <div class="bio-text">
+          <h2>About</h2>
+          <p id="bio">A systems and automation engineer who builds practical tools and prototypes. I work with Linux/Unix, Python and embedded electronics.</p>
+        </div>
+      </div>
     </section>
 
     <section class="projects">
       <h2>Selected Projects</h2>
       
-      <article class="project-group" data-classification="training">
-        <h3 style="text-transform:capitalize">training</h3>
-        <ul class="project-list" data-page-size="6" data-class="training">
-          
-          <li>
-            <a class="proj" href="https://github.com/jaygit/github-for-developers-7" target="_blank" rel="noopener noreferrer">
-              <div class="proj-content">
-                
-                <img class="proj-logo" src="assets/images/github-for-developers-7.svg" alt="github-for-developers-7 logo">
-                
-                <div class="proj-meta">
-                  <div class="proj-title">github-for-developers-7</div>
-                  <div class="proj-desc">Training received on Github from O'Reilly</div>
-                  <div class="scroll-hint" aria-hidden="true">
-                    <span class="hint-up">▲</span>
-                    <span class="hint-down">▼</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-          <li>
-            <a class="proj" href="https://github.com/jaygit/githubActions-ex3" target="_blank" rel="noopener noreferrer">
-              <div class="proj-content">
-                
-                <img class="proj-logo" src="assets/images/githubactions-ex3.svg" alt="githubActions-ex3 logo">
-                
-                <div class="proj-meta">
-                  <div class="proj-title">githubActions-ex3</div>
-                  <div class="proj-desc">Advanced GitHub Actions examples demonstrating environment variables, job dependencies, custom actions, and secrets management.</div>
-                  <div class="scroll-hint" aria-hidden="true">
-                    <span class="hint-up">▲</span>
-                    <span class="hint-down">▼</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-        </ul>
-        <div class="pager" data-class="training"></div>
-      </article>
-      
-      <article class="project-group" data-classification="electronics">
-        <h3 style="text-transform:capitalize">electronics</h3>
-        <ul class="project-list" data-page-size="6" data-class="electronics">
-          
-          <li>
-            <a class="proj" href="https://github.com/jaygit/pirover" target="_blank" rel="noopener noreferrer">
-              <div class="proj-content">
-                
-                <img class="proj-logo" src="assets/images/pirover.svg" alt="pirover logo">
-                
-                <div class="proj-meta">
-                  <div class="proj-title">pirover</div>
-                  <div class="proj-desc">A rover built with raspberry pi and vision.</div>
-                  <div class="scroll-hint" aria-hidden="true">
-                    <span class="hint-up">▲</span>
-                    <span class="hint-down">▼</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-          <li>
-            <a class="proj" href="https://github.com/jaygit/scroll-phat" target="_blank" rel="noopener noreferrer">
-              <div class="proj-content">
-                
-                <img class="proj-logo" src="assets/images/scroll-phat.svg" alt="scroll-phat logo">
-                
-                <div class="proj-meta">
-                  <div class="proj-title">scroll-phat</div>
-                  <div class="proj-desc">clone of pimoroni scroll phat code</div>
-                  <div class="scroll-hint" aria-hidden="true">
-                    <span class="hint-up">▲</span>
-                    <span class="hint-down">▼</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-          <li>
-            <a class="proj" href="https://github.com/jaygit/r2d2_clock" target="_blank" rel="noopener noreferrer">
-              <div class="proj-content">
-                
-                <img class="proj-logo" src="assets/images/r2d2-clock.svg" alt="r2d2_clock logo">
-                
-                <div class="proj-meta">
-                  <div class="proj-title">r2d2_clock</div>
-                  <div class="proj-desc">This is a raspberry pi talking clock that I built for my son, fitted on an R2D2 cardboard picture (Hence the name)</div>
-                  <div class="scroll-hint" aria-hidden="true">
-                    <span class="hint-up">▲</span>
-                    <span class="hint-down">▼</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-        </ul>
-        <div class="pager" data-class="electronics"></div>
-      </article>
-      
       <article class="project-group" data-classification="project">
         <h3 style="text-transform:capitalize">project</h3>
         <ul class="project-list" data-page-size="6" data-class="project">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/portfolio" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/portfolio.svg" alt="portfolio logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">portfolio</div>
+                  <div class="proj-desc">This site is for building a static web-page for public repos.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
           
           <li>
             <a class="proj" href="https://github.com/jaygit/wired" target="_blank" rel="noopener noreferrer">
@@ -293,6 +209,112 @@
           
         </ul>
         <div class="pager" data-class="project"></div>
+      </article>
+      
+      <article class="project-group" data-classification="training">
+        <h3 style="text-transform:capitalize">training</h3>
+        <ul class="project-list" data-page-size="6" data-class="training">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/github-for-developers-7" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/github-for-developers-7.svg" alt="github-for-developers-7 logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">github-for-developers-7</div>
+                  <div class="proj-desc">Training received on Github from O'Reilly</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/githubActions-ex3" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/githubactions-ex3.svg" alt="githubActions-ex3 logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">githubActions-ex3</div>
+                  <div class="proj-desc">Advanced GitHub Actions examples demonstrating environment variables, job dependencies, custom actions, and secrets management.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+        <div class="pager" data-class="training"></div>
+      </article>
+      
+      <article class="project-group" data-classification="electronics">
+        <h3 style="text-transform:capitalize">electronics</h3>
+        <ul class="project-list" data-page-size="6" data-class="electronics">
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/pirover" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/pirover.svg" alt="pirover logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">pirover</div>
+                  <div class="proj-desc">A rover built with raspberry pi and vision.</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/scroll-phat" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/scroll-phat.svg" alt="scroll-phat logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">scroll-phat</div>
+                  <div class="proj-desc">clone of pimoroni scroll phat code</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="proj" href="https://github.com/jaygit/r2d2_clock" target="_blank" rel="noopener noreferrer">
+              <div class="proj-content">
+                
+                <img class="proj-logo" src="assets/images/r2d2-clock.svg" alt="r2d2_clock logo">
+                
+                <div class="proj-meta">
+                  <div class="proj-title">r2d2_clock</div>
+                  <div class="proj-desc">This is a raspberry pi talking clock that I built for my son, fitted on an R2D2 cardboard picture (Hence the name)</div>
+                  <div class="scroll-hint" aria-hidden="true">
+                    <span class="hint-up">▲</span>
+                    <span class="hint-down">▼</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+        <div class="pager" data-class="electronics"></div>
       </article>
       
     </section>
