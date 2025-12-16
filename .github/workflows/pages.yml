@@ -1,7 +1,5 @@
-# Purpose: GitHub Actions workflow to upload and deploy this static site to GitHub Pages
 name: Deploy Pages
 
-# Minimal permissions required for the Pages deployment
 permissions:
   contents: write
   pages: write
@@ -17,16 +15,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      # Step 1: Fetch the repository
+      - name: Checkout code
         uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
+      # Step 2: Ensure Node.js is installed (for build tools, if needed)
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # Step 3: Build your static content
+      # (Skip if not applicable)
+      # Example: If using Python, skip or customize.
+
+      # Step 4: Prepare files for deployment
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload repository root as the site artifact (static files only)
-          path: .
+          path: |
+            index.html
+            assets
 
+      # Step 5: Deploy contents to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
