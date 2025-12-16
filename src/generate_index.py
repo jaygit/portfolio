@@ -272,11 +272,15 @@ def generate_index():
             cls = p.get('classification') or 'project'
             projects_by_class.setdefault(cls, []).append(p)
 
+        # Allow customizing the header image via HEADER_IMAGE env var
+        header_image = os.environ.get('HEADER_IMAGE', '/assets/images/bio-bg.png')
+        
         rendered = tmpl.render(
             projects_by_class=projects_by_class,
             site_name=site_name,
             site_tagline=site_tagline,
             site_bio=site_bio,
+            header_image=header_image,
         )
 
         out_path = os.path.join(os.getcwd(), 'index.html')
