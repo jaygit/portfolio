@@ -22,21 +22,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 'lts/*'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build site
-      run: npm run build
-
     - name: Upload to Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: './build'
+        path: '.'
 
     - name: Deploy to GitHub Pages
       id: deployment
